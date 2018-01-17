@@ -145,6 +145,10 @@
 \nabla \mathbf{A}+ \dfrac{1}{c} \pdd{\phi}{t} = 0
 \end{equation}
 
+Понятно, что при преобразовании \eqref{psi} это уравнение уже не будет выполнятся, что нам и требовалось.
+
+
+
 \subsection{Волновые уравнения для потенциалов}
 
 Получим теперь оставшиеся уравнения Максвелла \eqref{Gauss_E}, \eqref{Circ_H} через наши потенциалы. Для этого возьмем ротор от уравнения \eqref{Faradey} и раскроем его по правилу двойного векторного произведения:
@@ -167,11 +171,13 @@
 
 Таким образом, мы всего лишь записали волновные уравнения электромагнитного поля, явно учитывая источники поля --- заряды $ \rho $ и токи $ \mathbf{j} $. Подставим теперь в наши уравнения \eqref{sq_E} -- \eqref{sq_B} потенциалы \eqref{pot} (опираясь на доказанное в пункте \ref{pot_th}). Получаем:
 
-\begin{equation}\label{_b_sq_phi}
-\square \left( - \nabla \phi  - \dfrac{1}{c} \pdd{\mathbf{A}}{t} \right) = \dfrac{4\pi}{c^2} \pdd{\mathbf{j}}{t} + 4 \pi \nabla \rho
-\end{equation}
-\begin{equation}\label{}
-\square \left( \nabla \times \mathbf{A} \right) = \nabla \times - \dfrac{4\pi}{c}\mathbf{j}
+\begin{equation}\label{sq}
+\left.
+\begin{aligned}
+& \square \left( - \nabla \phi  - \dfrac{1}{c} \pdd{\mathbf{A}}{t} \right) = \dfrac{4\pi}{c^2} \pdd{\mathbf{j}}{t} + 4 \pi \nabla \rho \\
+& \square \left( \nabla \times \mathbf{A} \right) = \nabla \times - \dfrac{4\pi}{c}\mathbf{j} \\
+\end{aligned}
+\right.
 \end{equation}
 
 Замечаем, что последнее уравнение будет верно тождественно, если положить следующее: 
@@ -180,7 +186,7 @@
 \square \mathbf{A} = - \dfrac{4\pi}{c}\mathbf{j}
 \end{equation}
 
-Тогда с учётом \eqref{sq_A} мы получаем для \eqref{_b_sq_phi} следующий вид уравнения:
+Тогда с учётом \eqref{sq_A} мы получаем для первого из \eqref{sq} следующий вид уравнения:
 
 \begin{equation}\label{}
 \square (\nabla \phi) = -4\pi \nabla \rho
@@ -192,7 +198,7 @@
 \square \phi = - 4 \pi \rho
 \end{equation}
 
-Таким образом, мы получили \eqref{sq_A} -- \eqref{sq_phi} --- волновые уравнения для потенциалов электромагнитного поля, которые вместе с определениями полей через потенциалы \eqref{pot} полностью эквивалентны исходным уравнениям Максвелла \eqref{Gauss_E} --- \eqref{Circ_H}. 
+Таким образом, мы получили \eqref{sq_A}, \eqref{sq_phi} --- волновые уравнения для потенциалов электромагнитного поля, которые вместе с определениями полей через потенциалы \eqref{pot} полностью эквивалентны исходным уравнениям Максвелла \eqref{Gauss_E} --- \eqref{Circ_H}. Полученные выше уравнения можно получить и по-другому, не делая допущений c ротором/градиентов для \eqref{sq}: сразу подставить в уравнения \eqref{Gauss_E}, \eqref{Circ_H} наши поля из \eqref{pot} и затем воспользоваться Лоренц-калибровкой \eqref{Lorents}.
 
 Кстати говоря, Лоренц-калибровка \eqref{Lorents} задает здесь закон сохранения заряда (в виде уравнения непрерывности). В самом деле, применим к уравнению \eqref{sq_A} дивергенцию, а к уравнению \eqref{sq_phi} дифференцирование $ \frac{1}{c}\pdd{}{t} $ и сложим эти уравнения: 
 
@@ -204,21 +210,12 @@
 \end{aligned}
 \right.
 \quad \te \quad
-\square \left( \nabla \mathbf{A}+ \dfrac{1}{c} \pdd{\phi}{t} \right)  = - \dfrac{4 \pi}{c} \left(  \nabla \x \mathbf{j} + \pdd{\rho}{t} \right) 
+\square \left( \nabla \x \mathbf{A}+ \dfrac{1}{c} \pdd{\phi}{t} \right)  = - \dfrac{4 \pi}{c} \left(  \nabla \x \mathbf{j} + \pdd{\rho}{t} \right) 
 \end{equation}
 
 Так как выражение под оператором Д'Аламбера равно нулю в силу калибровки \eqref{Lorents}, отсюда получаем и равенство нулю правой части, где и записан закон сохранения заряда. 
 
 
-%Понятно, что при преобразовании \eqref{psi} это уравнение уже не будет выполнятся, что нам и требовалось. Калибровка Лоренца позволяет нам получить очень важный результат, который мы приведем без вывода (в силу математической сложности выражения полей через 4-мерный потенциал и тензор электромагнитного поля). А именно, оставшиеся уравнения Максвелла \eqref{Gauss_E}, \eqref{Circ_H} могут быть заменены на эквивалентную систему из двух уравнений :
-%
-%\begin{equation}\label{}
-%\triangle \phi - \dfrac{\epsilon \mu }{c^2}\pdd{^2 \phi}{t^2} = \square \phi = -4 \pi \dfrac{\rho}{\epsilon}
-%\end{equation}
-%\begin{equation}\label{}
-%\triangle \mathbf{A}- \dfrac{\epsilon \mu }{c^2}\pdd{^2 \mathbf{A}}{t^2} = \square \mathbf{A}= - \dfrac{4\pi}{c} \mu \mathbf{j}
-%\end{equation}
-%
-%Здесь использованы обозначения $ \triangle = \nabla \x \nabla $  --- оператор Лапласа, $ \square = \triangle -  \frac{\epsilon \mu }{c^2}\pdd{^2}{t^2}$ --- оператор Д'Аламбера. Таким образом, эти два уравнения вкупе с самим определением потенциалов \eqref{pot}, конечно (которые эквивалентны двум другим уравнениям согласно доказанному в пункте \ref{pot_th}) полностью задают наше электромагнитное поле. 
+
 
 \end{document}
