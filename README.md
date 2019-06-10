@@ -1,5 +1,3 @@
-# Gen_Phys_own_Q
+# Вопросы по выбору
 
-Own questions wth different semesters of General Physics 
-
-Now is ready 1-3 semestrs.
+В этом репозитории хранятся вопросы по выбору, подготовленные мной для экзаменов кафедры общей физики МФТИ в ходе обучения в 1-6 семестрах.
